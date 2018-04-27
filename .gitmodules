@@ -2,7 +2,3 @@
 	path = DS3PanoramaViewer
 	url = https://github.com/misdake/DS3PanoramaViewer.git
 	branch = master
-[submodule "ChipAnnotationViewer"]
-	path = ChipAnnotationViewer
-	url = https://github.com/misdake/ChipAnnotationViewer.git
-	branch = master
