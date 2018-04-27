@@ -1,4 +1,0 @@
-[submodule "DS3PanoramaViewer"]
-	path = DS3PanoramaViewer
-	url = https://github.com/misdake/DS3PanoramaViewer.git
-	branch = master
