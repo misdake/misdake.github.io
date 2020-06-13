@@ -4,6 +4,6 @@ Some of my personal projects:
 
 [Chip Annotation](https://misdake.github.io/ChipAnnotationViewer/)
 
-[Ballision](https://misdake.github.io/Ballision/) (require a joystick to control!)
+[Ballision](https://misdake.github.io/Ballision/)
 
 [AR demos with jsartoolkit5](https://rgbuv.xyz/jsartoolkit/)
