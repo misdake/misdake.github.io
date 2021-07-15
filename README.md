@@ -9,3 +9,5 @@ Some of my personal projects:
 [AR demos with jsartoolkit5](https://rgbuv.xyz/jsartoolkit/)
 
 [forknjoin](https://misdake.github.io/forknjoin/)
+
+[Digital Design v0.2](https://rgbuv.xyz/digitaldesign/)
