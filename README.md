@@ -12,4 +12,5 @@ Some of my personal projects:
 
 [Digital Design v0.2](https://rgbuv.xyz/digitaldesign/)
 
-[dodge](https://misdake.github.io/game/dodge/)
+[dodge](https://misdake.github.io/game/dodge/) [(PuzzleScript source)](https://misdake.github.io/game/dodge/puzzlescript.txt)
+

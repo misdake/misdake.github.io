@@ -1,0 +1,213 @@
+title dodge
+author misdake
+homepage misdake.github.io
+key_repeat_interval 0.5
+( verbose_logging )
+========
+OBJECTS
+========
+
+Temp
+GRAY
+.....
+.....
+.....
+.....
+.....
+
+Background
+LIGHTGREEN GREEN
+11111
+01111
+11101
+11111
+10111
+
+Wall
+BROWN DARKBROWN
+00010
+11111
+01000
+11111
+00010
+
+Target
+DarkBlue
+.....
+.000.
+.0.0.
+.000.
+.....
+
+Glass
+GRAY GREEN LIGHTGREEN
+.....
+.....
+00000
+.....
+.....
+
+DownArrow
+WHITE BROWN
+.....
+..1..
+..1..
+..1..
+..0..
+
+FiredDownArrow
+Red BROWN
+.....
+..1..
+..1..
+..1..
+..0..
+
+Player
+Black Orange White Blue
+.000.
+.111.
+22222
+.333.
+.3.3.
+
+DeadPlayer
+Black Orange White Blue Red brown
+..5..
+33510
+.3410
+33210
+..2..
+
+Ballista1
+White lightbrown GRAY
+.222.
+2...2
+1...1
+.111.
+.....
+
+Ballista2
+White lightbrown GRAY
+.....
+22222
+1...1
+.111.
+.....
+Ballista3
+White lightbrown GRAY
+.....
+22222
+1...1
+.111.
+.....
+Ballista4
+White lightbrown GRAY
+.....
+22222
+1...1
+.111.
+.....
+
+
+=======
+LEGEND
+=======
+
+. = Background
+# = Wall
+- = Glass
+O = Target
+P = Player
+D = Ballista1 and DownArrow
+A = DownArrow
+Ballista = Ballista1 or Ballista2 or Ballista3 or Ballista4
+Arrow = DownArrow
+FiredArrow = FiredDownArrow
+
+=======
+SOUNDS
+=======
+FiredArrow Create 35956704
+EndLevel 78313100
+
+================
+COLLISIONLAYERS
+================
+
+Background
+Target
+Player, DeadPlayer, Wall, Glass, Ballista
+Arrow, FiredArrow
+Temp
+
+======
+RULES
+======
+
+[DeadPlayer] -> restart
+
+(reload)
+late [ Ballista3 ] -> [ Ballista1 Arrow ]
+[ Ballista2 ] -> [ Ballista3 ]
+
+(ballista follow player)
+[ horizontal Player | ... | Ballista1 Arrow ] -> [ horizontal Player | ... | horizontal Ballista1 horizontal Arrow ]
+
+(ballista fire at player)
+[ vertical Player | ... | Ballista1 Arrow ] -> [ vertical Player | ... | Ballista2 FiredArrow ]
+[ action Player | ... | Ballista1 Arrow ] -> [ stationary Player | ... | Ballista2 FiredArrow ]
+
+(arrow move)
+[ stationary FiredDownArrow ] -> [ DOWN FiredDownArrow ]
+(arrow hit wall -> disappear)
+late [ FiredArrow Wall ] -> [ Wall ]
+late [ Arrow Wall ] -> [ Wall ] (fix bug)
+late [ Ballista1 ] -> [ Ballista1 Arrow ] (fix bug)
+(arrow hit player -> die)
+late [ Player FiredArrow ] -> [ DeadPlayer ]
+
+[> Player] -> [> Player Temp]
+late [ Player Temp ] -> CANCEL
+late [ Temp ] -> [ ]
+
+==============
+WINCONDITIONS
+==============
+
+all Player on Target
+no DeadPlayer
+
+=======
+LEVELS
+=======
+
+#######
+#..D..#
+#-----#
+#P..###
+###.###
+###.###
+###.###
+###..O#
+#######
+
+#######
+#.D#D.#
+#--#--#
+#P.#.O#
+#..#..#
+#..#..#
+##.#.##
+##...##
+#######
+
+#######
+#.D#D.#
+#-----#
+#....O#
+#..#..#
+#..#.##
+##...##
+#P...##
+#######
