@@ -11,3 +11,5 @@ Some of my personal projects:
 [forknjoin](https://misdake.github.io/forknjoin/)
 
 [Digital Design v0.2](https://rgbuv.xyz/digitaldesign/)
+
+[dodge](https://misdake.github.io/game/dodge/)
