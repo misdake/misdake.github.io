@@ -1,7 +1,7 @@
 title dodge
 author misdake
 homepage misdake.github.io
-key_repeat_interval 0.5
+key_repeat_interval 0.3
 ( verbose_logging )
 ========
 OBJECTS
@@ -183,13 +183,13 @@ LEVELS
 =======
 
 #######
-#..D..#
+#D....#
 #-----#
-#P..###
-###.###
-###.###
-###.###
-###..O#
+#P....#
+#.#.#.#
+#.#.#.#
+#.#.#.#
+#....O#
 #######
 
 #######
@@ -202,12 +202,14 @@ LEVELS
 ##...##
 #######
 
+message press X to stay still
+
 #######
 #.D#D.#
 #-----#
 #....O#
-#..#..#
 #..#.##
-##...##
+##.#..#
+##.#.##
 #P...##
 #######
