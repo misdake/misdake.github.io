@@ -213,6 +213,8 @@ late [ Temp ] -> [ ]
 (arrow hit wall -> disappear)
 late [ Arrow Wall ] -> [ Wall ]
 (arrow hit player -> die)
+UP [ UP Player | ArrowDn ] -> [ DeadPlayer | ]
+DOWN [ DOWN Player | ArrowUp ] -> [ DeadPlayer | ]
 late [ Player Arrow ] -> [ DeadPlayer ]
 
 late [ BallistaDn ArrowUp ] -> [ BallistaXDn ]
