@@ -31,6 +31,21 @@ BROWN DARKBROWN
 11111
 00010
 
+Crate
+BROWN DARKBROWN LIGHTBROWN
+..00.
+0111.
+.1000
+0.11.
+.001.
+DeadCrate
+BROWN DARKBROWN LIGHTBROWN
+..01.
+0111.
+.1000
+0.11.
+.001.
+
 Target
 DarkBlue
 ..0..
@@ -39,13 +54,62 @@ DarkBlue
 .000.
 ..0..
 
-Glass1
-GRAY lightgray
+BallistaBG
+DarkGreen DarkGray
+00000
+01000
+00000
+00010
+00000
+Glass2
+DarkGreen DarkGray Gray
 .....
-00.00
-11.11
-00.00
+22222
+11111
+00000
+10000
+Glass3
+DarkGreen DarkGray Gray
+0012.
+0012.
+1112.
+2222.
 .....
+Glass4
+DarkGreen DarkGray Gray
+0012.
+0012.
+0012.
+0012.
+1012.
+Glass8
+DarkGreen DarkGray Gray
+10000
+00000
+11111
+22222
+.....
+Glass6
+DarkGreen DarkGray Gray
+.2100
+.2100
+.2100
+.2100
+.2101
+Glass7
+DarkGreen DarkGray Gray
+01000
+00000
+00111
+10122
+0012.
+Glass9
+DarkGreen DarkGray Gray
+01000
+00000
+11101
+22100
+.2100
 
 Player
 Black Orange White Blue
@@ -63,37 +127,35 @@ Black Orange White Blue Red brown
 33210
 ..2..
 
-ArrowDn
+ArrowD
 Red BROWN
 .....
 ..1..
 ..1..
 ..1..
 ..0..
-
-Ballista1Dn
+Ballista1D
 White lightbrown GRAY BROWN
 .222.
 2.3.2
 1.3.1
 .131.
 ..0..
-
-Ballista2Dn
+Ballista2D
 White lightbrown GRAY
 .....
 22222
 1...1
 .111.
 .....
-Ballista3Dn
+Ballista3D
 White lightbrown GRAY
 .....
 22222
 1...1
 .111.
 .....
-BallistaXDn
+BallistaXD
 gray darkgray darkgray Red BROWN
 ..00.
 003.0
@@ -101,37 +163,35 @@ gray darkgray darkgray Red BROWN
 114.1
 ..4..
 
-ArrowUp
+ArrowU
 Red BROWN
 ..0..
 ..1..
 ..1..
 ..1..
 .....
-
-Ballista1Up
+Ballista1U
 White lightbrown GRAY BROWN
 ..0..
 .131.
 1.3.1
 2.3.2
 .222.
-
-Ballista2Up
+Ballista2U
 White lightbrown GRAY
 .....
 .111.
 1...1
 22222
 .....
-Ballista3Up
+Ballista3U
 White lightbrown GRAY
 .....
 .111.
 1...1
 22222
 .....
-BallistaXUp
+BallistaXU
 gray darkgray darkgray Red BROWN
 ..4..
 1.411
@@ -139,6 +199,77 @@ gray darkgray darkgray Red BROWN
 0.300
 .00..
 
+ArrowL
+Red BROWN
+.....
+.....
+0111.
+.....
+.....
+Ballista1L
+White lightbrown GRAY BROWN
+..12.
+.1..2
+03332
+.1..2
+..12.
+Ballista2L
+White lightbrown GRAY
+..12.
+.1.2.
+.1.2.
+.1.2.
+..12.
+Ballista3L
+White lightbrown GRAY
+..12.
+.1.2.
+.1.2.
+.1.2.
+..12.
+BallistaXL
+gray darkgray darkgray Red BROWN
+.110.
+....0
+44430
+.1.0.
+.110.
+
+ArrowR
+Red BROWN
+.....
+.....
+.1110
+.....
+.....
+Ballista1R
+White lightbrown GRAY BROWN
+.21..
+2..1.
+23330
+2..1.
+.21..
+Ballista2R
+White lightbrown GRAY
+.21..
+.2.1.
+.2.1.
+.2.1.
+.21..
+Ballista3R
+White lightbrown GRAY
+.21..
+.2.1.
+.2.1.
+.2.1.
+.21..
+BallistaXR
+gray darkgray darkgray Red BROWN
+.011.
+.01..
+03444
+0....
+.011.
 
 =======
 LEGEND
@@ -146,35 +277,55 @@ LEGEND
 
 . = Background
 # = Wall
-- = Glass1
+X = Crate
+2 = Glass2
+3 = Glass3
+4 = Glass4
+6 = Glass6
+7 = Glass7
+8 = Glass8
+9 = Glass9
 O = Target
 P = Player
-D = Ballista1Dn
-U = Ballista1Up
-BallistaX = BallistaXDn or BallistaXUp
-Ballista1 = Ballista1Dn or Ballista1Up
-BallistaDn = Ballista1Dn or Ballista2Dn or Ballista3Dn
-BallistaUp = Ballista1Up or Ballista2Up or Ballista3Up
-Ballista = BallistaDn or BallistaUp
-Arrow = ArrowDn or ArrowUp
+` = BallistaBG
+D = Ballista1D and BallistaBG
+U = Ballista1U and BallistaBG
+L = Ballista1L and BallistaBG
+R = Ballista1R and BallistaBG
+Glass = Glass2 or Glass3 or Glass4 or Glass6 or Glass7 or Glass8 or Glass9
+BallistaX = BallistaXD or BallistaXU or BallistaXL or BallistaXR
+Ballista1DU = Ballista1D or Ballista1U
+Ballista1LR = Ballista1L or Ballista1R
+BallistaD = Ballista1D or Ballista2D or Ballista3D
+BallistaU = Ballista1U or Ballista2U or Ballista3U
+BallistaL = Ballista1L or Ballista2L or Ballista3L
+BallistaR = Ballista1R or Ballista2R or Ballista3R
+BallistaDU = BallistaD or BallistaU
+BallistaLR = BallistaL or BallistaR
+Arrow = ArrowD or ArrowU or ArrowL or ArrowR
 
 =======
 SOUNDS
 =======
 Arrow Create 35956704
 DeadPlayer Create 2856102
-BallistaX Create 31649102
 EndLevel 78313100
+
+sfx0 94305102
+BallistaX Create 94305102
 
 ================
 COLLISIONLAYERS
 ================
 
 Background
+BallistaBG
 Target
-Player, DeadPlayer, Wall, Glass1, BallistaDn, BallistaUp, BallistaX
-ArrowDn
-ArrowUp
+Player, DeadPlayer, Wall, Crate, DeadCrate, Glass, BallistaDU, BallistaLR, BallistaX
+ArrowD
+ArrowU
+ArrowL
+ArrowR
 Temp
 
 ======
@@ -184,25 +335,36 @@ RULES
 [DeadPlayer] -> restart
 
 (reload iterations)
-late [ Ballista3Dn ] -> [ Ballista1Dn ]
-[ Ballista2Dn ] -> [ Ballista3Dn ]
-late [ Ballista3Up ] -> [ Ballista1Up ]
-[ Ballista2Up ] -> [ Ballista3Up ]
+late [ Ballista3D ] -> [ Ballista1D ]
+[ Ballista2D ] -> [ Ballista3D ]
+late [ Ballista3U ] -> [ Ballista1U ]
+[ Ballista2U ] -> [ Ballista3U ]
+late [ Ballista3L ] -> [ Ballista1L ]
+[ Ballista2L ] -> [ Ballista3L ]
+late [ Ballista3R ] -> [ Ballista1R ]
+[ Ballista2R ] -> [ Ballista3R ]
 
 
 (ballista follow player)
-[ horizontal Player | ... | Ballista1 ] -> [ horizontal Player | ... | horizontal Ballista1 ]
+[ horizontal Player | ... | Ballista1DU ] -> [ horizontal Player | ... | horizontal Ballista1DU ]
+[ vertical Player | ... | Ballista1LR ] -> [ vertical Player | ... | vertical Ballista1LR ]
 
 (ballista fire at player)
-[ vertical Player | ... | Ballista1Dn ] -> [ vertical Player | ... | Ballista2Dn ArrowDn ]
-[ vertical Player | ... | Ballista1Up ] -> [ vertical Player | ... | Ballista2Up ArrowUp ]
-[ action Player | ... | Ballista1Dn ] -> [ action Player | ... | Ballista2Dn ArrowDn ]
-[ action Player | ... | Ballista1Up ] -> [ action Player | ... | Ballista2Up ArrowUp ]
+[ vertical Player | ... | Ballista1D ] -> [ vertical Player | ... | Ballista2D ArrowD ]
+[ vertical Player | ... | Ballista1U ] -> [ vertical Player | ... | Ballista2U ArrowU ]
+[ action Player | ... | Ballista1D ] -> [ action Player | ... | Ballista2D ArrowD ]
+[ action Player | ... | Ballista1U ] -> [ action Player | ... | Ballista2U ArrowU ]
+[ horizontal Player | ... | Ballista1L ] -> [ horizontal Player | ... | Ballista2L ArrowL ]
+[ horizontal Player | ... | Ballista1R ] -> [ horizontal Player | ... | Ballista2R ArrowR ]
+[ action Player | ... | Ballista1L ] -> [ action Player | ... | Ballista2L ArrowL ]
+[ action Player | ... | Ballista1R ] -> [ action Player | ... | Ballista2R ArrowR ]
 
 
 (arrow move)
-[ ArrowDn ] -> [ Down ArrowDn ]
-[ ArrowUp ] -> [ Up ArrowUp ]
+[ ArrowD ] -> [ Down ArrowD ]
+[ ArrowU ] -> [ Up ArrowU ]
+[ ArrowL ] -> [ Left ArrowL ]
+[ ArrowR ] -> [ Right ArrowR ]
 
 
 (disable player moving into wall)
@@ -210,15 +372,26 @@ late [ Ballista3Up ] -> [ Ballista1Up ]
 late [ Player Temp ] -> CANCEL
 late [ Temp ] -> [ ]
 
+(arrow hit Ballista -> die)
+late [ BallistaD ArrowU ] -> [ BallistaXD ]
+late [ BallistaU ArrowD ] -> [ BallistaXU ]
+late [ BallistaL ArrowR ] -> [ BallistaXL ]
+late [ BallistaR ArrowL ] -> [ BallistaXR ]
+
 (arrow hit wall -> disappear)
 late [ Arrow Wall ] -> [ Wall ]
-(arrow hit player -> die)
-UP [ UP Player | ArrowDn ] -> [ DeadPlayer | ]
-DOWN [ DOWN Player | ArrowUp ] -> [ DeadPlayer | ]
-late [ Player Arrow ] -> [ DeadPlayer ]
+late [ Arrow BallistaBG ] -> [ BallistaBG ]
 
-late [ BallistaDn ArrowUp ] -> [ BallistaXDn ]
-late [ BallistaUp ArrowDn ] -> [ BallistaXUp ]
+late [ Arrow Crate ] -> [ DeadCrate ] sfx0
+late [ Arrow DeadCrate ] -> [ DeadCrate ]
+late [ DeadCrate ] -> []
+
+(arrow hit player -> die)
+DOWN [ DOWN Player | ArrowU ] -> [ DeadPlayer | ]
+UP [ UP Player | ArrowD ] -> [ DeadPlayer | ]
+LEFT [ LEFT Player | ArrowR ] -> [ DeadPlayer | ]
+RIGHT [ RIGHT Player | ArrowL ] -> [ DeadPlayer | ]
+late [ Player Arrow ] -> [ DeadPlayer ]
 
 ==============
 WINCONDITIONS
@@ -232,8 +405,8 @@ LEVELS
 =======
 
 #######
-#D....#
-#-----#
+#D````#
+#88888#
 #P....#
 #.#.#.#
 #.#.#.#
@@ -242,8 +415,8 @@ LEVELS
 #######
 
 #######
-#.D#D.#
-#--#--#
+#`D#D`#
+#88#88#
 #P.#.O#
 #..#..#
 #..#..#
@@ -254,8 +427,8 @@ LEVELS
 message press X to stay still
 
 #######
-#.D#D.#
-#-----#
+#`D#D`#
+#88888#
 #....O#
 #..#.##
 ##.#..#
@@ -269,26 +442,86 @@ message press X to stay still
 #.#.#.#
 #.#.#.#
 #....O#
-#-----#
-#U....#
+#22222#
+#U````#
 #######
 
 #######
-#D....#
-#-----#
+#D````#
+#88888#
 #.....#
 #..#..#
 #P..#O#
-#-----#
-#U.#U.#
+#22222#
+#U`#U`#
 #######
 
 #######
-#D.D..#
-#-----#
+#D`D`D#
+#88888#
 #.#...#
 #.#.#.#
 #P..#O#
-#-----#
-#UUU..#
+#22222#
+##UU`U#
+#######
+
+#######
+#P#...#
+#.#.#.#
+#....X#
+#X#.#O#
+#.#.#.#
+#22222#
+#U`U#U#
+#######
+
+#######
+#D`#`D#
+#88888#
+#X.X..#
+#X.X#X#
+#PX.#O#
+#22222#
+##U```#
+#######
+
+#######
+#D`D``#
+#8889`#
+#...6L#
+#.X.6`#
+#PXO6L#
+#.X.6`#
+#...6L#
+#######
+
+#######
+#DD#``#
+#8889`#
+#..P6L#
+#.#.6`#
+#..X6L#
+#XXX6`#
+#.#O6`#
+#######
+
+#######
+#D````#
+#8889`#
+#P..6L#
+#.#.6`#
+##..6L#
+#..#6`#
+#.XO6`#
+#######
+
+####D##
+``D789`
+`783.6`
+R4O.X6L
+#4.X.6`
+R4.X.6`
+`4P#.6`
+`4..X6L
 #######
