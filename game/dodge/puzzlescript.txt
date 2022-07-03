@@ -1,5 +1,6 @@
 title dodge
 author misdake
+homepage misdake.github.io
 key_repeat_interval 0.3
 verbose_logging
 enable_level_select 1
