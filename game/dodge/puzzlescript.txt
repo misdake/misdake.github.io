@@ -1,9 +1,10 @@
 title dodge
 author misdake
-homepage misdake.github.io
 key_repeat_interval 0.3
 verbose_logging
 enable_level_select 1
+(build with https://pancelor.com/PuzzleScript/editor.html)
+ 
 ========
 OBJECTS
 ========
@@ -39,6 +40,7 @@ BROWN DARKBROWN LIGHTBROWN
 .1000
 0.11.
 .001.
+
 DeadCrate
 BROWN DARKBROWN LIGHTBROWN
 ..01.
@@ -62,6 +64,48 @@ DarkGreen DarkGray
 00000
 00010
 00000
+Hole
+Green #004FFF #008FFF
+01110
+12111
+11111
+11211
+01110
+GlassQ
+DarkGreen DarkGray Gray
+.....
+.2222
+.2111
+.2100
+.2100
+GlassE
+DarkGreen DarkGray Gray
+.....
+2222.
+1112.
+0012.
+0012.
+GlassZ
+DarkGreen DarkGray Gray
+.2100
+.2100
+.2111
+.2222
+.....
+GlassC
+DarkGreen DarkGray Gray
+0012.
+0012.
+1112.
+2222.
+.....
+Glass1
+DarkGreen DarkGray Gray
+0012.
+10122
+00111
+00000
+01000
 Glass2
 DarkGreen DarkGray Gray
 .....
@@ -71,11 +115,11 @@ DarkGreen DarkGray Gray
 10000
 Glass3
 DarkGreen DarkGray Gray
-0012.
-0012.
-1112.
-2222.
-.....
+.2100
+22100
+11101
+00000
+01000
 Glass4
 DarkGreen DarkGray Gray
 0012.
@@ -279,6 +323,11 @@ LEGEND
 . = Background
 # = Wall
 X = Crate
+Q = GlassQ
+E = GlassE
+Z = GlassZ
+C = GlassC
+1 = Glass1
 2 = Glass2
 3 = Glass3
 4 = Glass4
@@ -288,12 +337,13 @@ X = Crate
 9 = Glass9
 O = Target
 P = Player
+~ = Hole
 ` = BallistaBG
 D = Ballista1D and BallistaBG
 U = Ballista1U and BallistaBG
 L = Ballista1L and BallistaBG
 R = Ballista1R and BallistaBG
-Glass = Glass2 or Glass3 or Glass4 or Glass6 or Glass7 or Glass8 or Glass9
+Glass = Glass1 or Glass2 or Glass3 or Glass4 or Glass6 or Glass7 or Glass8 or Glass9 or GlassQ or GlassE or GlassZ or GlassC
 BallistaX = BallistaXD or BallistaXU or BallistaXL or BallistaXR
 Ballista1DU = Ballista1D or Ballista1U
 Ballista1LR = Ballista1L or Ballista1R
@@ -322,7 +372,7 @@ COLLISIONLAYERS
 Background
 BallistaBG
 Target
-Player, DeadPlayer, Wall, Crate, DeadCrate, Glass, BallistaDU, BallistaLR, BallistaX
+Hole, Player, DeadPlayer, Wall, Crate, DeadCrate, Glass, BallistaDU, BallistaLR, BallistaX
 ArrowD
 ArrowU
 ArrowL
@@ -405,6 +455,7 @@ no DeadPlayer
 LEVELS
 =======
 
+(basic levels)
 #######
 #D````#
 #88888#
@@ -425,7 +476,7 @@ LEVELS
 ##...##
 #######
 
-message press X to stay still
+message press X to skip a turn
 
 #######
 #`D#D`#
@@ -457,6 +508,28 @@ message press X to stay still
 #U`#U`#
 #######
 
+(add crate)
+
+#######
+#P#...#
+#.#.#.#
+#....X#
+#X#.#O#
+#.#.#.#
+#22222#
+#U`U#U#
+#######
+
+#######
+#`D#``#
+#88888#
+#..X..#
+##..#.#
+#P.X#O#
+#22222#
+##UU#`#
+#######
+
 #######
 #D`D`D#
 #88888#
@@ -468,13 +541,13 @@ message press X to stay still
 #######
 
 #######
-#P#...#
-#.#.#.#
-#....X#
-#X#.#O#
-#.#.#.#
-#22222#
-#U`U#U#
+#D````#
+#8889`#
+#P..6L#
+#.#.6`#
+##..6L#
+#..#6`#
+#.XO6`#
 #######
 
 message press R to restart level
@@ -489,6 +562,8 @@ message press R to restart level
 ##U```#
 #######
 
+(add left/right ballista)
+
 #######
 #D`D``#
 #8889`#
@@ -497,6 +572,37 @@ message press R to restart level
 #PXO6L#
 #.X.6`#
 #...6L#
+#######
+
+(add hole)
+#######
+#``D###
+#88888#
+#P~...#
+#X..~.#
+#~..XO#
+#22222#
+#U#UUU#
+#######
+
+#######
+#D#D`D#
+#88888#
+#P~...#
+#...X.#
+#~~~.~#
+#X.XX.#
+#O#222#
+###UUU#
+
+#######
+#DD#``#
+#8889`#
+#O..6`#
+#X~X6`#
+#.X.6L#
+#~.X6L#
+#P..6L#
 #######
 
 #######
@@ -510,26 +616,6 @@ message press R to restart level
 #######
 
 #######
-#D````#
-#8889`#
-#P..6L#
-#.#.6`#
-##..6L#
-#..#6`#
-#.XO6`#
-#######
-
-####D##
-``D789`
-`783.6`
-R4O.X6L
-#4.X.6`
-R4.X.6`
-`4P#.6`
-`4..X6L
-#######
-
-#######
 #DD```#
 #8889`#
 #P..6L#
@@ -538,3 +624,43 @@ R4.X.6`
 #X#X6L#
 #XXO6L#
 #######
+
+#######
+#DDD``#
+#8889`#
+#...6`#
+#.~~6`#
+#...6L#
+#~..6L#
+#P..OL#
+#######
+
+####D##
+``D789`
+`78C.6`
+R4O.X6L
+#4.X.6`
+R4.X.6`
+`4P#.6`
+`4..X6L
+#######
+
+#######
+#O#DD``
+#X#889`
+#XXX.6L
+#.#..6L
+#XX.p6L
+#22223`
+#```U``
+#######
+
+``DDD``
+`78889`
+R4P..6L
+R4..~6L
+R4X..6L
+R4.~X6L
+R4.XO6L
+`12223`
+``UUU``
