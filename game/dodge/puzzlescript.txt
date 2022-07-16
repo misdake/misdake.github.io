@@ -34,6 +34,14 @@ BROWN DARKBROWN
 11111
 00010
 
+Box
+DARKBROWN BROWN
+.000.
+00110
+01010
+01100
+.000.
+
 Crate
 BROWN DARKBROWN LIGHTBROWN
 ..00.
@@ -323,7 +331,9 @@ LEGEND
 
 . = Background
 # = Wall
+B = Box
 X = Crate
+S = Crate and BallistaBG
 Q = GlassQ
 E = GlassE
 Z = GlassZ
@@ -366,6 +376,8 @@ EndLevel 78313100
 sfx0 94305102
 BallistaX Create 94305102
 
+sfx1 64520708
+
 ================
 COLLISIONLAYERS
 ================
@@ -373,7 +385,7 @@ COLLISIONLAYERS
 Background
 BallistaBG
 Target
-Hole, Player, DeadPlayer, Wall, Crate, DeadCrate, Glass, BallistaDU, BallistaLR, BallistaX
+Hole, Box, Player, DeadPlayer, Wall, Crate, DeadCrate, Glass, BallistaDU, BallistaLR, BallistaX
 ArrowD
 ArrowU
 ArrowL
@@ -418,6 +430,12 @@ late [ Ballista3R ] -> [ Ballista1R ]
 [ ArrowL ] -> [ Left ArrowL ]
 [ ArrowR ] -> [ Right ArrowR ]
 
+(push box, arrow hit box)
+[ Box Arrow ] -> [ Box ]
+late [ Box Arrow ] -> [ Box ]
+[> Player | Box ] -> [> Player | > Box]
+[> Player | Box | Arrow ] -> [> Player | > Box | ]
+[> Player | Box | Hole ] -> [> Player | | ] sfx1
 
 (disable player moving into wall)
 [> Player] -> [> Player Temp]
@@ -430,13 +448,14 @@ late [ BallistaU ArrowD ] -> [ BallistaXU ]
 late [ BallistaL ArrowR ] -> [ BallistaXL ]
 late [ BallistaR ArrowL ] -> [ BallistaXR ]
 
-(arrow hit wall -> disappear)
-late [ Arrow Wall ] -> [ Wall ]
-late [ Arrow BallistaBG ] -> [ BallistaBG ]
-
+(arrow hit crate -> destroy)
 late [ Arrow Crate ] -> [ DeadCrate ] sfx0
 late [ Arrow DeadCrate ] -> [ DeadCrate ]
 late [ DeadCrate ] -> []
+
+(arrow hit wall -> disappear)
+late [ Arrow Wall ] -> [ Wall ]
+late [ Arrow BallistaBG ] -> [ BallistaBG ]
 
 (arrow hit player -> die)
 DOWN [ DOWN Player | ArrowU ] -> [ DeadPlayer | ]
@@ -457,6 +476,7 @@ LEVELS
 =======
 
 (basic levels)
+
 #######
 #D````#
 #88888#
@@ -596,6 +616,7 @@ message press R to restart level
 #######
 
 (add hole)
+
 #######
 #``D###
 #88888#
@@ -635,6 +656,51 @@ message press R to restart level
 #~..6L#
 #P..OL#
 #######
+
+
+(box)
+
+#######
+#dd`dd#
+#88888#
+#...#.#
+#.#...#
+#.#B#.#
+#B..#O#
+#P~.#.#
+#######
+
+#######
+#DDD`D#
+#88888#
+#...#O#
+#.X.B~#
+#~#BB.#
+#B..#.#
+#PB~..#
+#######
+
+#DD``##
+#88888#
+#...~~#
+#.B.#.#
+#.X.#.#
+#.B.#O#
+#P.XB.#
+#22222#
+#U``#U#
+
+#`D#D``
+#88889`
+#....6L
+#.~#O6L
+#..B.6L
+#..#~6L
+#XB..6L
+#..P.6L
+#######
+
+(final levels)
 
 ####D##
 ``D789`
