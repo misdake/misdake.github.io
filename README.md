@@ -12,7 +12,7 @@ Some of my personal projects:
 
 [Digital Design v0.2](https://rgbuv.xyz/digitaldesign/)
 
-[dodge](https://misdake.github.io/game/dodge/) [(PuzzleScript source)](https://misdake.github.io/game/dodge/puzzlescript.txt)
+[dodge](https://misdake.itch.io/dodge) [(PuzzleScript source)](https://misdake.github.io/game/dodge/puzzlescript.txt)
 
-[Slimy Steps](https://misdake.github.io/game/slimysteps/) [(PuzzleScript source)](https://misdake.github.io/game/slimysteps/puzzlescript.txt)
+[Slimy Steps](https://misdake.itch.io/slimy-steps) [(PuzzleScript source)](https://misdake.github.io/game/slimysteps/puzzlescript.txt)
 
