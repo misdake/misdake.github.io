@@ -1,0 +1,257 @@
+title Slimy Steps
+author misdake
+homepage misdake.github.io
+key_repeat_interval 0.5
+verbose_logging
+enable_level_select
+(build with https://pancelor.com/PuzzleScript/editor.html)
+
+========
+OBJECTS
+========
+
+Background
+LIGHTGREEN GREEN
+11111
+01111
+11101
+11111
+10111
+
+Target
+darkbrown transparent
+00000
+01110
+01110
+01110
+00000
+
+Wall
+gray darkgray
+00010
+11111
+01000
+11111
+00010
+
+Player
+blue transparent
+11011
+11011
+00100
+11011
+11011
+
+Crate
+orange brown
+11111
+10001
+10101
+10001
+11111
+
+CrateSleep
+orange brown
+11111
+10001
+10001
+10001
+11111
+
+( temp objs )
+CrateConnected
+brown
+NonCrate
+grey
+MoveTarget
+red
+
+=======
+LEGEND
+=======
+
+. = Background
+# = Wall
+P = Player and Crate
+* = Crate
+O = Target
+Q = Target and Crate
+S = CrateSleep
+
+=======
+SOUNDS
+=======
+
+================
+COLLISIONLAYERS
+================
+
+Background
+NonCrate
+MoveTarget
+Wall, Crate, CrateConnected, CrateSleep
+Target
+Player
+
+======
+RULES
+======
+
+(reset)
+[ CrateConnected ] -> [ Crate ]
+
+( create non crate )
+[ Background ] -> [ Background NonCrate ]
+[ NonCrate Crate ] -> [ Crate ]
+[ NonCrate Wall ] -> [ Wall ]
+[ NonCrate CrateSleep ] -> [ CrateSleep ]
+
+(move to non crate)
+[ > Player | NonCrate ] -> [ > Player | > MoveTarget ]
+startloop
+[ Crate | > MoveTarget ] -> [ > MoveTarget | Crate ]
+endloop
+[ MoveTarget ] -> []
+[ NonCrate ] -> []
+
+(floodfill)
+late [ Player Crate ] -> [ Player CrateConnected ]
+startloop
+late [ CrateConnected | CrateSleep ] -> [ CrateConnected | CrateConnected ]
+late [ Crate | CrateConnected ] -> [ CrateConnected | CrateConnected ]
+endloop
+
+(check connectedness)
+late [ Crate ] -> cancel
+late [ CrateConnected ] -> [ Crate ]
+
+
+==============
+WINCONDITIONS
+==============
+
+all Target on Crate
+
+=======
+LEVELS
+=======
+
+#######
+#.....#
+#...OO#
+#P*.OO#
+#**...#
+#.....#
+#######
+
+#######
+#.....#
+#..OOO#
+#.P*O.#
+#.**..#
+#.....#
+#######
+
+#######
+#.....#
+#...OO#
+#**POO#
+#***OO#
+#.....#
+#######
+
+#######
+#.*...#
+#.*.OO#
+#.P#..#
+#.*#OO#
+#**...#
+#######
+
+#######
+#O...O#
+#.....#
+#P*.SS#
+#**...#
+#.....#
+#######
+
+#######
+#.OOOS#
+#.O...#
+#.O#SS#
+#*P...#
+#.....#
+#######
+
+#######
+#.....#
+#..#..#
+#PO#OS#
+#*.#SS#
+#**..S#
+#######
+
+#######
+#..OO##
+#..#.##
+#S..S.#
+#.P#S.#
+#**...#
+#######
+
+#######
+#..O.O#
+#..#.##
+#S..S.#
+#.P#SS#
+#**...#
+#######
+
+#######
+#**.OO#
+#.*#.S#
+#.P#..#
+#.*#OS#
+#**.O.#
+#######
+
+#######
+#....O#
+#***#.#
+#**P.O#
+#***#.#
+#....O#
+#######
+
+#######
+#..OOO#
+#..O#O#
+#**QOO#
+#*#*..#
+#P**..#
+#######
+
+#######
+#..OOO#
+#..O#O#
+#**.OO#
+#*#*..#
+#P**..#
+#######
+
+#######
+#..SSO#
+#.#..S#
+#PQO#.#
+#**..S#
+#.#S.O#
+#######
+
+#######
+#S...S#
+##..#O#
+#...OS#
+#*P#..#
+#.*.OS#
+#######

@@ -14,3 +14,5 @@ Some of my personal projects:
 
 [dodge](https://misdake.github.io/game/dodge/) [(PuzzleScript source)](https://misdake.github.io/game/dodge/puzzlescript.txt)
 
+[Slimy Steps](https://misdake.github.io/game/slimysteps/) [(PuzzleScript source)](https://misdake.github.io/game/slimysteps/puzzlescript.txt)
+
