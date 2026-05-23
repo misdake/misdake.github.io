@@ -16,3 +16,4 @@ Some of my personal projects:
 
 [Slimy Steps](https://misdake.itch.io/slimy-steps) [(PuzzleScript source)](https://misdake.github.io/game/slimysteps/puzzlescript.txt)
 
+[Dark Souls III Collision Mesh Viewer](https://rgbuv.xyz/DS3TerrainAdventure/)
