@@ -17,7 +17,7 @@ Personal games, interactive worlds, and tools.
 ## Tools
 
 - <a href="https://rgbuv.xyz/DS1TerrainAdventure/" target="_blank" rel="noopener noreferrer">Dark Souls Terrain Adventure</a> — Explore the world of Dark Souls in your browser. <a href="https://www.bilibili.com/video/BV17RVt6jEBH" target="_blank" rel="noopener noreferrer">Watch demo</a>.
-- <a href="https://rgbuv.xyz/DS3TerrainAdventure/" target="_blank" rel="noopener noreferrer">Dark Souls III Collision Mesh Viewer</a> — Explore the world of Dark Souls III in your browser. <a href="https://www.bilibili.com/video/BV1unGB64Efp" target="_blank" rel="noopener noreferrer">Watch demo</a>.
+- <a href="https://rgbuv.xyz/DS3TerrainAdventure/" target="_blank" rel="noopener noreferrer">Dark Souls III Terrain Adventure</a> — Explore the world of Dark Souls III in your browser. <a href="https://www.bilibili.com/video/BV1unGB64Efp" target="_blank" rel="noopener noreferrer">Watch demo</a>.
 - <a href="https://misdake.github.io/ChipAnnotationViewer/" target="_blank" rel="noopener noreferrer">Chip Annotation</a> — Explore chip die photographs and their annotations.
 - <a href="https://misdake.github.io/DS3PanoramaViewer/index.html" target="_blank" rel="noopener noreferrer">Dark Souls III Panorama</a> — Explore panoramic views of Dark Souls III in your browser.
 - <a href="https://rgbuv.xyz/jsartoolkit/" target="_blank" rel="noopener noreferrer">AR demos with jsartoolkit5</a> — WebAR experiments with jsartoolkit5 and ar2Tracking.
