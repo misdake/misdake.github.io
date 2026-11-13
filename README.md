@@ -1,8 +1,8 @@
-# misdake's Portfolio
+# My Projects
 
 Personal games, interactive worlds, and tools.
 
-<a href="https://github.com/misdake" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://twitter.com/rSkip" target="_blank" rel="noopener noreferrer">Twitter</a> · <a href="https://misdake.github.io/" target="_blank" rel="noopener noreferrer">View the portfolio</a>
+<a href="https://github.com/misdake" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://twitter.com/rSkip" target="_blank" rel="noopener noreferrer">Twitter</a> · <a href="https://misdake.github.io/" target="_blank" rel="noopener noreferrer">View all projects</a>
 
 ## Games
 
