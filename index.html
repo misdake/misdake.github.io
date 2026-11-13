@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Games, interactive worlds, and tools by misdake.">
+<title>misdake's Portfolio</title>
+<link rel="icon" href="favicon.ico">
+<style>
+  * { box-sizing: border-box; }
+  :root { color-scheme: light; }
+  body {
+    margin: 0;
+    background: #faf9f6;
+    color: #292724;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 1360px; margin: 0 auto; padding: 40px 32px 64px; }
+  header { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; padding-bottom: 24px; margin-bottom: 32px; border-bottom: 1px solid #e4e1da; }
+  h1 { margin: 0; font-size: 28px; font-weight: 650; letter-spacing: -0.04em; }
+  .social-links { display: flex; gap: 20px; font-size: 14px; }
+  .social-links a { text-decoration: none; }
+  .social-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .project-sections { display: grid; gap: 40px; }
+  .project-section { min-width: 0; }
+  h2 { margin: 0 0 16px; font-size: 19px; font-weight: 650; letter-spacing: -0.025em; }
+  .project-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+  .project-card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; background: #fff; border: 1px solid #e4e1da; border-radius: 10px; box-shadow: 0 1px 2px #29272406; }
+  .project-card:hover { border-color: #c8c2b7; }
+  .project-copy { display: flex; flex: 1; flex-direction: column; align-items: start; gap: 8px; min-width: 0; padding: 16px; }
+  a { color: #9e3b32; }
+  a:focus-visible { outline: 3px solid #9e3b32; outline-offset: -3px; border-radius: 2px; }
+  .project-title { color: inherit; text-decoration: none; }
+  .thumb { display: block; overflow: hidden; aspect-ratio: 4 / 3; background: #111; border-bottom: 1px solid #e4e1da; }
+  .thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .thumb--contain img { object-fit: contain; }
+  h3 { margin: 0; font-size: 16px; font-weight: 650; line-height: 1.4; }
+  .project-title:hover { color: #9e3b32; text-decoration: underline; text-underline-offset: 3px; }
+  .project-card p { margin: 0; color: #68645d; font-size: 14px; line-height: 1.55; }
+  .card-links { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: auto; padding-top: 4px; font-size: 13px; }
+  .card-links a { text-underline-offset: 3px; }
+  @media (max-width: 1099px) {
+    .container { padding: 32px 24px 48px; }
+    .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 639px) {
+    .container { padding: 24px 20px 40px; }
+    header { padding-bottom: 20px; margin-bottom: 28px; }
+    h1 { font-size: 26px; }
+    .project-sections { gap: 32px; }
+    .project-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>misdake's Portfolio</h1>
+    <nav class="social-links" aria-label="Social links">
+      <a href="https://github.com/misdake" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://twitter.com/rSkip" target="_blank" rel="noopener noreferrer" title="@rSkip">Twitter</a>
+    </nav>
+  </header>
+  <main class="project-sections">
+    <section class="project-section" aria-labelledby="games-heading">
+      <h2 id="games-heading">Games</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <a class="thumb thumb--contain" href="https://cdn.rgbuv.xyz/tankracer/index.html" target="_blank" rel="noopener noreferrer"><img src="images/tankracer.jpg" alt="Tank Racer preview" width="640" height="480" loading="eager" decoding="async" fetchpriority="high"></a>
+          <div class="project-copy">
+            <h3><a class="project-title" href="https://cdn.rgbuv.xyz/tankracer/index.html" target="_blank" rel="noopener noreferrer">Tank Racer</a></h3>
+            <p>A single-player browser version recompiled from the original game.</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a class="thumb" href="https://misdake.itch.io/field-artillery-training" target="_blank" rel="noopener noreferrer"><img src="images/field-artillery.png" alt="Field Artillery Training preview" width="315" height="250" loading="lazy" decoding="async"></a>
+          <div class="project-copy">
+            <h3><a class="project-title" href="https://misdake.itch.io/field-artillery-training" target="_blank" rel="noopener noreferrer">Field Artillery Training</a></h3>
+            <p>Adjust your firing angle and power to hit the target.</p>
+          <div class="card-links"><a href="https://www.bilibili.com/video/BV13jNm6vEhE" target="_blank" rel="noopener noreferrer">Watch demo</a></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a class="thumb" href="https://misdake.itch.io/space-shooter-demo" target="_blank" rel="noopener noreferrer"><img src="images/space-shooter.png" alt="SpaceShooter preview" width="315" height="250" loading="lazy" decoding="async"></a>
+          <div class="project-copy">
+            <h3><a class="project-title" href="https://misdake.itch.io/space-shooter-demo" target="_blank" rel="noopener noreferrer">SpaceShooter</a></h3>
+            <p>An arcade space shooter.</p>
+          <div class="card-links"><a href="https://www.bilibili.com/video/BV1RA4y1U7N9" target="_blank" rel="noopener noreferrer">Watch demo</a></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a class="thumb" href="https://misdake.itch.io/ballision" target="_blank" rel="noopener noreferrer"><img src="images/ballision.png" alt="Ballision preview" width="315" height="250" loading="lazy" decoding="async"></a>
+          <div class="project-copy">
+            <h3><a class="project-title" href="https://misdake.itch.io/ballision" target="_blank" rel="noopener noreferrer">Ballision</a></h3>
+            <p>A small simulation experiment.</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a class="thumb" href="https://misdake.itch.io/forknjoin" target="_blank" rel="noopener noreferrer"><img src="images/forknjoin.png" alt="forknjoin preview" width="315" height="250" loading="lazy" decoding="async"></a>
+          <div class="project-copy">
+            <h3><a class="project-title" href="https://misdake.itch.io/forknjoin" target="_blank" rel="noopener noreferrer">forknjoin</a></h3>
+            <p>A Sokoban-style puzzle game made for GMTK 2021.</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a class="thumb" href="https://misdake.itch.io/dodge" target="_blank" rel="noopener noreferrer"><img src="images/dodge.png" alt="Dodge preview" width="315" height="250" loading="lazy" decoding="async"></a>
+          <div class="project-copy">
+            <h3><a class="project-title" href="https://misdake.itch.io/dodge" target="_blank" rel="noopener noreferrer">Dodge</a></h3>
+            <p>Dodge the arrows and find your way to the target.</p>
+          <div class="card-links"><a href="game/dodge/puzzlescript.txt" target="_blank" rel="noopener noreferrer">PuzzleScript source</a></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a class="thumb" href="https://misdake.itch.io/slimy-steps" target="_blank" rel="noopener noreferrer"><img src="images/slimy-steps.jpg" alt="Slimy Steps preview" width="315" height="250" loading="lazy" decoding="async"></a>
+          <div class="project-copy">
+            <h3><a class="project-title" href="https://misdake.itch.io/slimy-steps" target="_blank" rel="noopener noreferrer">Slimy Steps</a></h3>
+            <p>Move your cells while keeping them connected.</p>
+          <div class="card-links"><a href="game/slimysteps/puzzlescript.txt" target="_blank" rel="noopener noreferrer">PuzzleScript source</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="project-section" aria-labelledby="tools-heading">
+      <h2 id="tools-heading">Tools</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <a class="thumb" href="https://rgbuv.xyz/DS1TerrainAdventure/" target="_blank" rel="noopener noreferrer"><img src="images/ds1-terrain-adventure.jpg" alt="Dark Souls Terrain Adventure preview" width="800" height="450" loading="lazy" decoding="async"></a>
+          <div class="project-copy">
+            <h3><a class="project-title" href="https://rgbuv.xyz/DS1TerrainAdventure/" target="_blank" rel="noopener noreferrer">Dark Souls Terrain Adventure</a></h3>
+            <p>Explore the world of Dark Souls in your browser.</p>
+          <div class="card-links"><a href="https://www.bilibili.com/video/BV17RVt6jEBH" target="_blank" rel="noopener noreferrer">Watch demo</a></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a class="thumb" href="https://rgbuv.xyz/DS3TerrainAdventure/" target="_blank" rel="noopener noreferrer"><img src="images/ds3-terrain-adventure.jpg" alt="Dark Souls III Terrain Adventure preview" width="800" height="450" loading="lazy" decoding="async"></a>
+          <div class="project-copy">
+            <h3><a class="project-title" href="https://rgbuv.xyz/DS3TerrainAdventure/" target="_blank" rel="noopener noreferrer">Dark Souls III Terrain Adventure</a></h3>
+            <p>Explore the world of Dark Souls III in your browser.</p>
+          <div class="card-links"><a href="https://www.bilibili.com/video/BV1unGB64Efp" target="_blank" rel="noopener noreferrer">Watch demo</a></div>
+          </div>
+        </article>
+
+
+        <article class="project-card">
+          <a class="thumb thumb--contain" href="https://misdake.github.io/ChipAnnotationViewer/" target="_blank" rel="noopener noreferrer"><img src="images/chip-annotation.png" alt="Chip Annotation preview" width="1240" height="1001" loading="lazy" decoding="async"></a>
+          <div class="project-copy">
+            <h3><a class="project-title" href="https://misdake.github.io/ChipAnnotationViewer/" target="_blank" rel="noopener noreferrer">Chip Annotation</a></h3>
+            <p>Explore chip die photographs and their annotations.</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a class="thumb thumb--contain" href="https://misdake.github.io/DS3PanoramaViewer/index.html" target="_blank" rel="noopener noreferrer"><img src="images/ds3-panorama.png" alt="Dark Souls III Firelink Shrine panorama" width="1689" height="1318" loading="lazy" decoding="async"></a>
+          <div class="project-copy">
+            <h3><a class="project-title" href="https://misdake.github.io/DS3PanoramaViewer/index.html" target="_blank" rel="noopener noreferrer">Dark Souls III Panorama</a></h3>
+            <p>Explore panoramic views of Dark Souls III in your browser.</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a class="thumb thumb--contain" href="https://rgbuv.xyz/jsartoolkit/" target="_blank" rel="noopener noreferrer"><img src="images/jsartoolkit-ar.png" alt="AR demos with jsartoolkit5 preview" width="956" height="716" loading="lazy" decoding="async"></a>
+          <div class="project-copy">
+            <h3><a class="project-title" href="https://rgbuv.xyz/jsartoolkit/" target="_blank" rel="noopener noreferrer">AR demos with jsartoolkit5</a></h3>
+            <p>WebAR experiments with jsartoolkit5 and ar2Tracking.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>
